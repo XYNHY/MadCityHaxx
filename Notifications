@@ -1,0 +1,174 @@
+local NotificationHolder = Instance.new("Frame")
+local NotificationBody = Instance.new("Frame")
+local NotificationFrame = Instance.new("Frame")
+local NotificationFrameCorner = Instance.new("UICorner")
+local NotificationTextFrame = Instance.new("Frame")
+local NotificationText = Instance.new("TextLabel")
+local NotificationTextFramePadding = Instance.new("UIPadding")
+local NotificationTopFrame = Instance.new("ImageLabel")
+local NotificationTitle = Instance.new("TextLabel")
+local NotificationTopFrameLine = Instance.new("Frame")
+local NotificationCloseBtn = Instance.new("TextButton")
+local NotificationCloseBtnIco = Instance.new("ImageLabel")
+local UIListLayout = Instance.new("UIListLayout")
+
+
+NotificationHolder.Name = "NotificationHolder"
+NotificationHolder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NotificationHolder.AnchorPoint = Vector2.new(1, 1)
+NotificationHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NotificationHolder.BackgroundTransparency = 1.000
+NotificationHolder.Position = UDim2.new(1, -15, 1, -10)
+NotificationHolder.Size = UDim2.new(0, 275, 1, -10)
+
+NotificationBody.Name = "NotificationBody"
+NotificationBody.Parent = NotificationHolder
+NotificationBody.AnchorPoint = Vector2.new(1, 1)
+NotificationBody.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NotificationBody.BackgroundTransparency = 1.000
+NotificationBody.Position = UDim2.new(1, -15, 1, -10)
+NotificationBody.Size = UDim2.new(0, 275, 0, 0)
+NotificationBody.Visible = false
+
+NotificationFrame.Name = "NotificationFrame"
+NotificationFrame.Parent = NotificationBody
+NotificationFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+NotificationFrame.BackgroundTransparency = 0.150
+NotificationFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+NotificationFrame.Position = UDim2.new(1, 15, 0, 0)
+NotificationFrame.Size = UDim2.new(1, 0, 0, 0)
+
+NotificationFrameCorner.Name = "NotificationFrameCorner"
+NotificationFrameCorner.Parent = NotificationFrame
+
+NotificationTextFrame.Name = "NotificationTextFrame"
+NotificationTextFrame.Parent = NotificationFrame
+NotificationTextFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NotificationTextFrame.BackgroundTransparency = 1.000
+NotificationTextFrame.BorderSizePixel = 0
+NotificationTextFrame.ClipsDescendants = true
+NotificationTextFrame.Position = UDim2.new(0, 0, 0, 32)
+NotificationTextFrame.Size = UDim2.new(1, 0, 0, 0)
+
+NotificationText.Name = "NotificationText"
+NotificationText.Parent = NotificationTextFrame
+NotificationText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NotificationText.BackgroundTransparency = 1.000
+NotificationText.BorderSizePixel = 0
+NotificationText.Size = UDim2.new(1, 0, 1, 0)
+NotificationText.Font = Enum.Font.Gotham
+NotificationText.Text = "i hate black people"
+NotificationText.TextColor3 = Color3.fromRGB(200, 200, 200)
+NotificationText.TextSize = 14.000
+NotificationText.TextWrapped = true
+NotificationText.TextXAlignment = Enum.TextXAlignment.Left
+NotificationText.TextYAlignment = Enum.TextYAlignment.Top
+
+NotificationTextFramePadding.Name = "NotificationTextFramePadding"
+NotificationTextFramePadding.Parent = NotificationTextFrame
+NotificationTextFramePadding.PaddingBottom = UDim.new(0, 10)
+NotificationTextFramePadding.PaddingLeft = UDim.new(0, 10)
+NotificationTextFramePadding.PaddingRight = UDim.new(0, 10)
+NotificationTextFramePadding.PaddingTop = UDim.new(0, 10)
+
+NotificationTopFrame.Name = "NotificationTopFrame"
+NotificationTopFrame.Parent = NotificationFrame
+NotificationTopFrame.BackgroundColor3 = Color3.fromRGB(248, 248, 248)
+NotificationTopFrame.BackgroundTransparency = 1.000
+NotificationTopFrame.BorderSizePixel = 0
+NotificationTopFrame.Size = UDim2.new(1, 0, 0, 32)
+NotificationTopFrame.ZIndex = 3
+NotificationTopFrame.Image = "rbxassetid://6276641225"
+NotificationTopFrame.ImageColor3 = Color3.fromRGB(35, 35, 35)
+NotificationTopFrame.ImageTransparency = 0.300
+NotificationTopFrame.ScaleType = Enum.ScaleType.Slice
+NotificationTopFrame.SliceCenter = Rect.new(256, 256, 256, 256)
+NotificationTopFrame.SliceScale = 0.022
+
+NotificationTitle.Name = "NotificationTitle"
+NotificationTitle.Parent = NotificationTopFrame
+NotificationTitle.AnchorPoint = Vector2.new(1, 0)
+NotificationTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NotificationTitle.BackgroundTransparency = 1.000
+NotificationTitle.BorderSizePixel = 0
+NotificationTitle.Position = UDim2.new(0, 10, 0, 0)
+NotificationTitle.Size = UDim2.new(0, 1, 1, 0)
+NotificationTitle.Font = Enum.Font.Gotham
+NotificationTitle.Text = "Notification"
+NotificationTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+NotificationTitle.TextSize = 14.000
+NotificationTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+NotificationTopFrameLine.Name = "NotificationTopFrameLine"
+NotificationTopFrameLine.Parent = NotificationTopFrame
+NotificationTopFrameLine.AnchorPoint = Vector2.new(0, 1)
+NotificationTopFrameLine.BackgroundColor3 = Color3.fromRGB(175, 175, 175)
+NotificationTopFrameLine.BackgroundTransparency = 0.600
+NotificationTopFrameLine.BorderSizePixel = 0
+NotificationTopFrameLine.Position = UDim2.new(0, 0, 1, 0)
+NotificationTopFrameLine.Size = UDim2.new(1, 0, 0, 1)
+
+NotificationCloseBtn.Name = "NotificationCloseBtn"
+NotificationCloseBtn.Parent = NotificationTopFrame
+NotificationCloseBtn.AnchorPoint = Vector2.new(1, 0.5)
+NotificationCloseBtn.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+NotificationCloseBtn.BackgroundTransparency = 1.000
+NotificationCloseBtn.Position = UDim2.new(1, -8, 0.5, 0)
+NotificationCloseBtn.Size = UDim2.new(0, 20, 0, 20)
+NotificationCloseBtn.AutoButtonColor = false
+NotificationCloseBtn.Font = Enum.Font.SourceSans
+NotificationCloseBtn.Text = ""
+NotificationCloseBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+NotificationCloseBtn.TextSize = 14.000
+
+NotificationCloseBtnIco.Name = "NotificationCloseBtnIco"
+NotificationCloseBtnIco.Parent = NotificationCloseBtn
+NotificationCloseBtnIco.AnchorPoint = Vector2.new(0.5, 0.5)
+NotificationCloseBtnIco.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NotificationCloseBtnIco.BackgroundTransparency = 1.000
+NotificationCloseBtnIco.Position = UDim2.new(0.5, 0, 0.5, 0)
+NotificationCloseBtnIco.Size = UDim2.new(1, -10, 1, -10)
+NotificationCloseBtnIco.Image = "http://www.roblox.com/asset/?id=6521435525"
+
+UIListLayout.Parent = NotificationHolder
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+UIListLayout.Padding = UDim.new(0, 6)
+
+-- Scripts:
+
+local function MVCR_fake_script() -- NotificationHolder.NotifScript 
+	local script = Instance.new('LocalScript', NotificationHolder)
+
+	local MainFrame = script.Parent
+	local Notif = MainFrame.NotificationBody
+	local TweenService = game:GetService('TweenService')
+	
+	MainFrame.ChildAdded:Connect(function(a)
+		if a.Name == "NotificationBody" then
+			TweenService:Create(a.NotificationFrame,TweenInfo.new(0.25, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),{Position = UDim2.new(0,0,0, 0)}):Play()
+		end
+	end)
+	
+	
+	local Notify = {}
+	
+	function Notify:New(title,text)
+		local NotifClone = Notif:Clone()
+		NotifClone.Parent = MainFrame
+		NotifClone.Visible = true
+		NotifClone.NotificationFrame.NotificationTopFrame.NotificationTitle.Text = title
+		NotifClone.NotificationFrame.NotificationTextFrame.NotificationText.Text = text
+		
+		NotifClone.NotificationFrame.NotificationTopFrame.NotificationCloseBtn.MouseButton1Click:Connect(function()
+			TweenService:Create(NotifClone.NotificationFrame,TweenInfo.new(0.25, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),{Position = UDim2.new(1,15,0, 0)}):Play()
+			delay(0.3,function()
+				NotifClone:Destroy()
+			end)
+		end)
+	end
+	
+	return Notify
+end
+coroutine.wrap(MVCR_fake_script)()
