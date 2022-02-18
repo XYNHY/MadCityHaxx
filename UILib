@@ -28,7 +28,7 @@ end
 
 
 
-local NotificationFrame = loadstring(game:HttpGet("https://raw.githubusercontent.com/XYNHY/MadCityHaxx/main/Notifications"))()
+local NotificationFrame = game:GetObjects("rbxassetid://6924028278")[1]
 NotificationFrame.ZIndex = 4
 NotificationFrame.Parent = NotificationHolder
 script = NotificationFrame.NotifScript
@@ -38,10 +38,10 @@ script = oldScript
 local SolarisLib = {
 	Themes = {
 		Default = {
-			MainFrame = Color3.fromRGB(54,57,63),
+			MainFrame = Color3.fromRGB(25, 25, 25),
 			TopBar = Color3.fromRGB(47,49,54),
 			TextColor =  Color3.fromRGB(255,255,255),
-			Menu = Color3.fromRGB(47,49,54),
+			Menu = Color3.fromRGB(25, 25, 25),
 			TabToggled = Color3.fromRGB(54,57,63),
 			Button = Color3.fromRGB(88,101,242),
 			ButtonHold = Color3.fromRGB(71,82,196),
