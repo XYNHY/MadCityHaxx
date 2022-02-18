@@ -274,7 +274,7 @@ function SolarisLib:New(Config)
 		MusicFrame.Visible = SolarisLib.Settings.ShowMusicOnLaunch
 		MusicFrame.Frame.Title.Text = "Not Playing"
 		MusicFrame.Frame.Progress.ProgressFrame.Size = UDim2.new(0,0,1,0)
-		MusicFrame.Frame.AddBtn.AutoButtonColor = true
+		MusicFrame.Frame.AddBtn.AutoButtonColor = false
 
 		MakeDraggable(MusicFrame.Frame.TopBar,MusicFrame)
 		MusicFrame.Frame.TopBar.CloseBtn.MouseButton1Click:Connect(function()
